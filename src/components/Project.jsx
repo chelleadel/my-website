@@ -8,17 +8,16 @@ export default function Project({ image, title, description, stacks, link, width
     return (
       <Flex
         alignItems={"flex-start"}
-        gap={8}
-        paddingBottom={20}
-        pl={3}
+        gap={{ base: 3, md: 8 }}
+        p={{ base: 4, md: 10 }}
         _hover={link ? { backgroundColor: "rgba(204, 204, 204, 0.2)", borderRadius: "5px", backgroundOpacity: "0.5" } : {}}
         cursor={link ? "pointer" : ""}
-        flexDir={{ base: "column", sm: "row" }}
+        flexDir={{ base: "column", md: "row" }}
       >
-        <Flex width="35%" justifyContent="center">
+        <Flex width={{ base: "100%", md: "35%" }} maxH={{ base: 200 }} justifyContent={{ base: "flex-start", sm: "center" }}>
           <Image objectFit="contain" maxW={{ base: "100%", sm: width }} src={image} alt={title} />
         </Flex>
-        <Stack width={"80%"} gap={5}>
+        <Stack width={{ md: "80%" }} gap={5}>
           <HStack justifyContent={"space-between"}>
             <Text fontSize="lg" fontWeight="bold">
               {title}

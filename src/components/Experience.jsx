@@ -8,17 +8,16 @@ export default function Experience({ startDate, endDate, title, company, descrip
     <Link href={link} isExternal _hover={{ textDecoration: "none" }}>
       <Flex
         alignItems={"flex-start"}
-        gap={8}
-        paddingBottom={20}
-        pl={3}
+        gap={{ base: 2, sm: 8 }}
+        p={{ base: 4, sm: 10 }}
         _hover={{ backgroundColor: "rgba(204, 204, 204, 0.1)", borderRadius: "5px", backgroundOpacity: "0.5" }}
         cursor="pointer"
         flexDir={{ base: "column", sm: "row" }}
       >
-        <Text fontSize="sm" width={{ sm: "20%" }} paddingTop={1}>
+        <Text fontSize="sm" width={{ md: "20%" }} paddingTop={1}>
           {startDate} - {endDate}
         </Text>
-        <Stack width={"80%"} gap={5}>
+        <Stack width={{ md: "80%" }} gap={5}>
           <HStack justifyContent={"space-between"}>
             <Text fontSize="lg" fontWeight="bold">
               {title} - {company}

@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <Box>
       <Flex position="sticky" top={20} padding={{ sm: 10 }} flexDir="column" color={useColorModeValue("gray.600", "gray.200")}>
-        <Flex gap={5}>
+        <Flex gap={5} justifyContent={"space-between"}>
           <Flex flexDir="column" mb="4">
             <Text fontFamily={"heading"} fontSize="xx-large" fontWeight="bold">
               Michelle Adeline
