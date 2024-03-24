@@ -8,7 +8,7 @@ export default function Experiences() {
   const experiences = [
     {
       startDate: "Jan 2024",
-      endDate: "Present",
+      endDate: "Now",
       title: "Software Engineer Intern",
       company: "Zenith Learning Group",
       description:

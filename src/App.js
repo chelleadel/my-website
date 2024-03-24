@@ -9,9 +9,8 @@ import Projects from "./pages/Projects";
 import OutsideWork from "./pages/OutsideWork";
 
 function App() {
-
   return (
-    <Flex flexDirection={{ base: "column", md: "row" }} p={20} minHeight="100vh" maxWidth="100%">
+    <Flex flexDirection={{ base: "column", md: "row" }} p={{ base: 10, md: 20 }} minHeight="100vh" maxWidth="100%">
       <Navbar />
       <Stack flex="2" spacing={10}>
         <About />

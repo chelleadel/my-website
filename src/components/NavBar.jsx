@@ -33,7 +33,7 @@ export default function Navbar() {
   // Mobile navigation
   const MobileNav = () => {
     return (
-      <Stack p={4} display={{ md: "none" }}>
+      <Stack p={5} display={{ md: "none" }}>
         <></>
       </Stack>
     );
@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <Box>
-      <Flex position="sticky" top={20} padding={10} flexDir="column" color={useColorModeValue("gray.600", "gray.200")}>
+      <Flex position="sticky" top={20} padding={{ sm: 10 }} flexDir="column" color={useColorModeValue("gray.600", "gray.200")}>
         <Flex gap={5}>
           <Flex flexDir="column" mb="4">
             <Text fontFamily={"heading"} fontSize="xx-large" fontWeight="bold">

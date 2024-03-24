@@ -6,14 +6,14 @@ import TechStack from "./TechStack";
 export default function Project({ image, title, description, stacks, link, width }) {
   const renderProjectInfo = () => {
     return (
-      <HStack
-        my={5}
+      <Flex
         alignItems={"flex-start"}
-        gap={10}
-        spacing={4}
-        padding={10}
+        gap={8}
+        paddingBottom={20}
+        pl={3}
         _hover={link ? { backgroundColor: "rgba(204, 204, 204, 0.2)", borderRadius: "5px", backgroundOpacity: "0.5" } : {}}
         cursor={link ? "pointer" : ""}
+        flexDir={{ base: "column", sm: "row" }}
       >
         <Flex width="35%" justifyContent="center">
           <Image objectFit="contain" maxW={{ base: "100%", sm: width }} src={image} alt={title} />
@@ -32,7 +32,7 @@ export default function Project({ image, title, description, stacks, link, width
             ))}
           </HStack>
         </Stack>
-      </HStack>
+      </Flex>
     );
   };
   return link ? (

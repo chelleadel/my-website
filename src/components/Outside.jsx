@@ -5,17 +5,16 @@ import React from "react";
 export default function Outside({ startDate, endDate, title, company, description, images, link }) {
   const renderContent = () => {
     return (
-      <HStack
-        my={5}
-        mr={7}
+      <Flex
         alignItems={"flex-start"}
         gap={8}
-        spacing={4}
-        padding={10}
+        pb={20}
+        pl={3}
         _hover={link ? { backgroundColor: "rgba(204, 204, 204, 0.2)", borderRadius: "5px", backgroundOpacity: "0.5" } : {}}
         cursor={link ? "pointer" : ""}
+        flexDir={{ base: "column", sm: "row" }}
       >
-        <Text fontSize="sm" width="20%">
+        <Text fontSize="sm" width={{ sm: "20%" }}>
           {startDate} - {endDate}
         </Text>
         <Stack width={"80%"} gap={5}>
@@ -32,7 +31,7 @@ export default function Outside({ startDate, endDate, title, company, descriptio
             ))}
           </Flex>
         </Stack>
-      </HStack>
+      </Flex>
     );
   };
 

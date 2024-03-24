@@ -8,7 +8,7 @@ export default function OutsideWork() {
   const outsideWorks = [
     {
       startDate: "July 2024",
-      endDate: "Present",
+      endDate: "Now",
       title: "Software Development Director",
       company: "NUS Fintech Society",
       description:
