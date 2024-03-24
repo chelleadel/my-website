@@ -6,6 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraBaseProvider, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  config: {
+    initialColorMode: "dark",
+  },
   styles: {
     global: (props) => ({
       body: {
