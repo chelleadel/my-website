@@ -10,5 +10,5 @@
       "@pages/*": ["src/pages/*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["next-env.d.ts", "src/**/*"]
 }

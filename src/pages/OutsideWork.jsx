@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 import React from "react";
 import Outside from "../components/Outside";
 
-export default function OutsideWork() {
+export default function Organisations() {
   const outsideWorks = [
     {
       startDate: "July 2024",

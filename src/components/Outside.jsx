@@ -3,11 +3,13 @@ import { HStack, Text, Stack, Image, Link, Flex } from "@chakra-ui/react";
 import React from "react";
 
 export default function Outside({ startDate, endDate, title, company, description, images, link }) {
+  const imageSize = 100 / images.length;
+
   const renderContent = () => {
     return (
       <Flex
         alignItems={"flex-start"}
-        gap={{ base: 2, md: 8 }}
+        gap={{ base: 3, md: 8 }}
         p={{ base: 4, md: 10 }}
         _hover={link ? { backgroundColor: "rgba(204, 204, 204, 0.2)", borderRadius: "5px", backgroundOpacity: "0.5" } : {}}
         cursor={link ? "pointer" : ""}
@@ -26,7 +28,7 @@ export default function Outside({ startDate, endDate, title, company, descriptio
           <Text opacity={0.6}>{description}</Text>
           <Flex flexDir={{ base: "column", sm: "row" }} gap={3}>
             {images.map((image) => (
-              <Image objectFit="cover" maxW={{ base: "100%", sm: "250px" }} src={image} alt={title} />
+              <Image objectFit="cover" maxW={{ base: "100%", sm: `${imageSize}%` }} src={image} alt={title} />
             ))}
           </Flex>
         </Stack>
