@@ -74,10 +74,16 @@ export default function Navbar() {
           <Text>B. Comp. Information Systems (Honours) @ NUS </Text>
         </VStack>
         <HStack mt={3} gap={3}>
-          <Button href="https://drive.google.com/file/d/1FncdUvHh_sCN3LSIquvEnQJuKJEoBPRq/view?usp=sharing" maxW={"40%"}>
-            <DownloadIcon color={useColorModeValue("gray.600", "#fff")} />
-            <Text opacity={0.9}>Resume</Text>
-          </Button>
+          <Link
+            href="https://drive.google.com/file/d/1FncdUvHh_sCN3LSIquvEnQJuKJEoBPRq/view?usp=sharing"
+            target="_blank"
+            maxW={"40%"}
+          >
+            <Button>
+              <DownloadIcon color={useColorModeValue("gray.600", "#fff")} />
+              <Text opacity={0.9}>Resume</Text>
+            </Button>
+          </Link>
           <Link href="https://github.com/chelleadel" isExternal>
             <LogoGithub color={useColorModeValue("gray.600", "#fff")} title={"Github"} height="25px" />
           </Link>
